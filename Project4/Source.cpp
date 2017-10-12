@@ -18,21 +18,24 @@ void pause() {
 //MAIN
 void main() {
 	int x;
-	cout << "Choose a three digit number." << endl;
-	cin >> x;
-	cout << "Nice Choice Loser" << endl;
-	int A = x / 100 ;
-	int B = x % 100 / 10 ;
-	int C = x % 10 ;
-
-	if ((A > B) && ( B > C)) {
-		cout << "descending" << endl;
-	}
-	else if ((A < B) && (B < C)) {
-		cout << "acscending" << endl;
-	}
-	else {
-		cout << "neither" << endl;
+	for (int i = 1; i <= 30; i++) { // makes a loop to make the user to enter in th number 30 times 
+		cout << i << endl;
+		cout << "Choose a 3 Digit #" << endl;
+		cin >> x;
+		int A = x / 100;
+		int B = x % 100 / 10;
+		int C = x % 10;
+		cout << "Nice Choice " << x << endl;// be nicer to user
+		if ((A > B) && (B > C)) {
+		cout << "Decending" << endl;
+		}
+		else if ((A < B) && (B < C)) {
+		cout << "Acending" << endl;
+		}
+		else { 
+		cout << "Neither" << endl;
+		}
+		
 	}
 	pause();
 }
