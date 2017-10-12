@@ -19,20 +19,21 @@ void pause() {
 void main() {
 	int x;
 	cout << "Choose a three digit number." << endl;
+	for( int i = 1; i < 31; i = i + 1) {
 	cin >> x;
 	cout << "Nice Choice Loser" << endl;
-	int A = x / 100 ;
-	int B = x % 100 / 10 ;
-	int C = x % 10 ;
-
-	if ((A > B) && ( B > C)) {
-		cout << "descending" << endl;
-	}
-	else if ((A < B) && (B < C)) {
-		cout << "acscending" << endl;
-	}
-	else {
-		cout << "neither" << endl;
+		int A = x / 100 ;
+		int B = x % 100 / 10 ;
+		int C = x % 10 ;
+		if ((A > B) && ( B > C)) {
+			cout << "descending" << endl;
+		}
+		else if ((A < B) && (B < C)) {
+			cout << "acscending" << endl;
+		}
+		else {
+			cout << "neither" << endl;
+		}
 	}
 	pause();
 }
