@@ -8,31 +8,33 @@ Coding what we did last class
 #include <conio.h>
 //Namespaces
 using namespace std; //*
-//Functions
+					 //Functions
 void pause() {
 	cout << "Press any key to continue . . .";
 	while (!_kbhit());
 	_getch();
 	cout << '\n';
 }
-//MAIN
+//MAIN 
 void main() {
-	int x;
-	cout << "Choose a three digit number." << endl;
-	cin >> x;
-	cout << "Nice Choice Loser" << endl;
-	int A = x / 100 ;
-	int B = x % 100 / 10 ;
-	int C = x % 10 ;
-
-	if ((A > B) && ( B > C)) {
-		cout << "descending" << endl;
+	for (int i = 0; i < 30; i++) {
+		int x;
+		cout << "Choose a three digit number." << endl; // Lets computer display command
+		cin >> x;
+		cout << "Nice Choice Loser" << endl;
+		int A = x / 100;
+		int B = x % 100 / 10;
+		int C = x % 10;
+		// Allows computer to verify whether numerical value is ascending or descending or neither 
+		if ((A > B) && (B > C)) {
+			cout << "descending" << endl;
+		}
+		else if ((A < B) && (B < C)) {
+			cout << "acscending" << endl;
+		}
+		else {
+			cout << "neither" << endl;
+		}
+		pause();
 	}
-	else if ((A < B) && (B < C)) {
-		cout << "acscending" << endl;
-	}
-	else {
-		cout << "neither" << endl;
-	}
-	pause();
 }
